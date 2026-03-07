@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Board</title>
+</head>
+<body>
+    <h1>Available Jobs</h1>
+    <div id="job-list"></div>
+
+    <script>
+        async function fetchJobs() {
+            const response = await fetch('http://127.0.0.1:5000/jobs');
+            const jobs = await response.json();
+            const list = document.getElementById('job-list');
+            jobs.forEach(job => {
+                const item = document.createElement('p');
+                item.innerHTML = `<strong>${job.title}</strong> at ${job.company}`;
+                list.appendChild(item);
+            });
+        }
+        fetchJobs();
+    </script>
+</body>
+</html>
