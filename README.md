@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///job_portal.db'
 db = SQLAlchemy(app)
 
-# Database Model for Jobs
+# Database Model for Job
 class Job(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
@@ -23,7 +23,7 @@ def post_job():
     db.session.commit()
     return jsonify({"message": "Job posted successfully!"}), 201
 
-# Route to view all jobs
+# Route to view all job
 @app.route('/jobs', methods=['GET'])
 def get_jobs():
     jobs = Job.query.all()
