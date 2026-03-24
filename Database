@@ -1,0 +1,2 @@
+CREATE DATABASE job_portal;
+USE job_portal;
