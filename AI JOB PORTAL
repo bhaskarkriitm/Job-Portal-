@@ -1,0 +1,9 @@
+job-portal-ai/
+│
+├── client/                # React Frontend
+├── server/                # Node.js Backend
+├── ai-service/            # Python AI Microservice
+├── docs/                  # Documentation
+├── .env
+├── docker-compose.yml
+└── README.md
