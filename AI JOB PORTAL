@@ -7,3 +7,61 @@ job-portal-ai/
 ├── .env
 ├── docker-compose.yml
 └── README.md
+
+//Frontend
+client/
+│
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── JobCard.jsx
+│   │   └── Loader.jsx
+│   │
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Login.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── JobDetails.jsx
+│   │   └── RecruiterPanel.jsx
+│   │
+│   ├── services/
+│   │   └── api.js
+│   │
+│   ├── context/
+│   │   └── AuthContext.jsx
+│   │
+│   ├── App.jsx
+│   └── main.jsx
+│
+└── package.json
+
+//Backend
+server/
+│
+├── controllers/
+│   ├── authController.js
+│   ├── jobController.js
+│   └── applicationController.js
+│
+├── models/
+│   ├── User.js
+│   ├── Job.js
+│   └── Application.js
+│
+├── routes/
+│   ├── authRoutes.js
+│   ├── jobRoutes.js
+│   └── applicationRoutes.js
+│
+├── middleware/
+│   └── authMiddleware.js
+│
+├── config/
+│   └── db.js
+│
+├── utils/
+│   └── matchScore.js   # AI API call
+│
+├── server.js
+└── package.json
